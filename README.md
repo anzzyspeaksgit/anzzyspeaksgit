@@ -150,7 +150,11 @@ Dashboard: React + Vite + Tailwind
 <!-- This section is auto-updated by GitHub Actions -->
 | Repository | PR | Status |
 |------------|-------|--------|
-| Loading... | Fetching latest merged PRs... | 🔄 |
+| [dragonfly-operator](https://github.com/dragonflydb/dragonfly-operator) | [#480](https://github.com/dragonflydb/dragonfly-operator/pull/480) fix: allow custom labels to override defaults | ✅ Merged |
+| [pyglet](https://github.com/pyglet/pyglet) | [#1418](https://github.com/pyglet/pyglet/pull/1418) fix(shapes): fix ZeroDivisionError on Multiline | ✅ Merged |
+| [CastSponsorSkip](https://github.com/gabe565/CastSponsorSkip) | [#182](https://github.com/gabe565/CastSponsorSkip/pull/182) fix: handle empty CSS_DEVICES env var | ✅ Merged |
+| [kagenti](https://github.com/kagenti/kagenti) | [#944](https://github.com/kagenti/kagenti/pull/944) docs: Document proxy usage for MCP inspector | ✅ Merged |
+| [yamusic-tui](https://github.com/DECE2183/yamusic-tui) | [#48](https://github.com/DECE2183/yamusic-tui/pull/48) fix(api): prevent panic in search with nil client | ✅ Merged |
 <!-- MERGED-PRS:END -->
 
 ---
