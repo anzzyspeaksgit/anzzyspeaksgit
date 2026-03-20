@@ -1,0 +1,50 @@
+name: Update README with Latest PRs
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [main]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Fetch Latest Merged PRs
+        id: fetch-prs
+        run: |
+          # Fetch merged PRs from GitHub API
+          MERGED_PRS=$(curl -s "https://api.github.com/search/issues?q=author:anzzyspeaksgit+type:pr+is:merged&sort=updated&order=desc&per_page=10" | jq -r '.items[:5] | .[] | "| [\(.repository_url | split("/") | .[-1])](https://github.com/\(.repository_url | split("/")[-2:]| join("/")))" + " | [#\(.number)](\(.html_url)) \(.title | .[0:50])... | ✅ Merged |"')
+          
+          # Create the table content
+          TABLE_CONTENT="| Repository | PR | Status |
+          |------------|-------|--------|
+          $MERGED_PRS"
+          
+          echo "TABLE<<EOF" >> $GITHUB_OUTPUT
+          echo "$TABLE_CONTENT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Update README
+        run: |
+          # Read current README
+          README_CONTENT=$(cat README.md)
+          
+          # Create new merged PRs section
+          NEW_SECTION="<!-- MERGED-PRS:START -->
+          <!-- This section is auto-updated by GitHub Actions -->
+          ${{ steps.fetch-prs.outputs.TABLE }}
+          <!-- MERGED-PRS:END -->"
+          
+          # Replace the section using sed
+          sed -i '/<!-- MERGED-PRS:START -->/,/<!-- MERGED-PRS:END -->/c\'"$NEW_SECTION" README.md
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Auto-update: Latest merged PRs" && git push)
