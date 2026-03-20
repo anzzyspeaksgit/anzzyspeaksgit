@@ -222,9 +222,7 @@ graph LR
   
   <br/>
   
-  <a href="https://github.com/yatharthjain">
-    <img src="https://img.shields.io/badge/Built%20by-@yatharthjain-8b5cf6?style=for-the-badge&logo=github&logoColor=white" alt="Built by"/>
-  </a>
+  <img src="https://img.shields.io/badge/Built%20by-The%20AI%20Boom%20%26%20Cursor-8b5cf6?style=for-the-badge&logo=cursor&logoColor=white" alt="Built by"/>
   
   <br/><br/>
   
