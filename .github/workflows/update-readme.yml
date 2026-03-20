@@ -27,26 +27,36 @@ jobs:
           with open('/tmp/prs.json', 'r') as f:
               data = json.load(f)
 
-          # Build table rows
+          # Build table rows in HTML format
           rows = []
           for item in data.get('items', []):
-              repo_url = item['repository_url'].replace('api.github.com/repos', 'github.com')
               repo_name = item['repository_url'].split('/')[-1]
               pr_num = item['number']
               pr_url = item['html_url']
-              title = item['title'][:45]
-              rows.append(f"| [{repo_name}]({repo_url}) | [#{pr_num}]({pr_url}) {title} | ✅ Merged |")
+              title = item['title'][:50]
+              rows.append(f'''    <tr>
+      <td><a href="{pr_url}"><code>#{pr_num}</code></a></td>
+      <td><b>{repo_name}</b></td>
+      <td>{title}</td>
+      <td>✅ MERGED</td>
+    </tr>''')
 
-          # Create new section
-          new_section = """<!-- MERGED-PRS:START -->
-          <!-- This section is auto-updated by GitHub Actions -->
-          | Repository | PR | Status |
-          |------------|-------|--------|
-          """ + "\n".join(rows) + """
-          <!-- MERGED-PRS:END -->"""
-
-          # Remove extra indentation
-          new_section = "\n".join(line.strip() for line in new_section.split("\n"))
+          # Create new section with HTML table
+          table_rows = "\n".join(rows)
+          new_section = f'''<!-- MERGED-PRS:START -->
+<!-- This section is auto-updated by GitHub Actions -->
+<div align="center">
+  <table>
+    <tr>
+      <th>🔗 Verify It</th>
+      <th>Repository</th>
+      <th>What Changed</th>
+      <th>Status</th>
+    </tr>
+{table_rows}
+  </table>
+</div>
+<!-- MERGED-PRS:END -->'''
 
           # Read README
           with open('README.md', 'r') as f:

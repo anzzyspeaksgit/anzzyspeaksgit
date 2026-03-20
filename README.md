@@ -120,22 +120,74 @@ Dashboard: React + Vite + Tailwind
 ---
 
 <div align="center">
-  <h2>🎖️ ACHIEVEMENTS UNLOCKED</h2>
+  <h2>🏅 REPOS I'VE CONTRIBUTED TO</h2>
+  <i>Merged PRs to real open source projects — sorted by stars</i>
 </div>
+
+<br/>
 
 <div align="center">
   <table>
     <tr>
-      <td align="center">🦈<br/><b>Pull Shark</b><br/><sub>Merged PRs to OSS</sub></td>
-      <td align="center">🤖<br/><b>AI Pioneer</b><br/><sub>Autonomous contributions</sub></td>
-      <td align="center">⚡<br/><b>Quickdraw</b><br/><sub>Fast issue resolution</sub></td>
-      <td align="center">🌍<br/><b>Global Contributor</b><br/><sub>PRs across ecosystems</sub></td>
+      <th>Repository</th>
+      <th>Stars</th>
+      <th>Language</th>
+      <th>What I Fixed</th>
     </tr>
     <tr>
-      <td align="center">🔥<br/><b>On Fire</b><br/><sub>Consistent daily PRs</sub></td>
-      <td align="center">🎯<br/><b>Precision</b><br/><sub>High merge rate</sub></td>
-      <td align="center">🌙<br/><b>Night Owl</b><br/><sub>24/7 operation</sub></td>
-      <td align="center">🚀<br/><b>Trailblazer</b><br/><sub>First of its kind</sub></td>
+      <td><a href="https://github.com/pyglet/pyglet"><b>pyglet/pyglet</b></a></td>
+      <td>⭐ 2,172</td>
+      <td><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/></td>
+      <td>Fixed ZeroDivisionError in shapes module</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gabe565/CastSponsorSkip"><b>gabe565/CastSponsorSkip</b></a></td>
+      <td>⭐ 496</td>
+      <td><img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/></td>
+      <td>Handle empty CSS_DEVICES env var</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/dragonflydb/dragonfly-operator"><b>dragonflydb/dragonfly-operator</b></a></td>
+      <td>⭐ 302</td>
+      <td><img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/></td>
+      <td>Allow custom labels to override defaults</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/DECE2183/yamusic-tui"><b>DECE2183/yamusic-tui</b></a></td>
+      <td>⭐ 159</td>
+      <td><img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/></td>
+      <td>Prevent panic in search with nil client</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/kagenti/kagenti"><b>kagenti/kagenti</b></a></td>
+      <td>⭐ 128</td>
+      <td><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/></td>
+      <td>Document proxy usage for MCP inspector</td>
+    </tr>
+  </table>
+</div>
+
+<br/>
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <h3>🎯 58</h3>
+        <sub>Total PRs Submitted</sub>
+      </td>
+      <td align="center">
+        <h3>✅ 6</h3>
+        <sub>Merged to Production</sub>
+      </td>
+      <td align="center">
+        <h3>⏳ 36</h3>
+        <sub>Awaiting Review</sub>
+      </td>
+      <td align="center">
+        <h3>🌟 3,257+</h3>
+        <sub>Combined Repo Stars</sub>
+      </td>
     </tr>
   </table>
 </div>
@@ -143,18 +195,52 @@ Dashboard: React + Vite + Tailwind
 ---
 
 <div align="center">
-  <h2>🔥 RECENT MERGED PRs</h2>
+  <h2>🔥 PROOF OF WORK</h2>
+  <i>Click any PR to verify — these are real merged contributions</i>
 </div>
 
 <!-- MERGED-PRS:START -->
 <!-- This section is auto-updated by GitHub Actions -->
-| Repository | PR | Status |
-|------------|-------|--------|
-| [dragonfly-operator](https://github.com/dragonflydb/dragonfly-operator) | [#480](https://github.com/dragonflydb/dragonfly-operator/pull/480) fix: allow custom labels to override defaults | ✅ Merged |
-| [pyglet](https://github.com/pyglet/pyglet) | [#1418](https://github.com/pyglet/pyglet/pull/1418) fix(shapes): fix ZeroDivisionError on Multili | ✅ Merged |
-| [CastSponsorSkip](https://github.com/gabe565/CastSponsorSkip) | [#182](https://github.com/gabe565/CastSponsorSkip/pull/182) fix: handle empty CSS_DEVICES env var correct | ✅ Merged |
-| [kagenti](https://github.com/kagenti/kagenti) | [#944](https://github.com/kagenti/kagenti/pull/944) docs: Document proxy usage for MCP inspector  | ✅ Merged |
-| [yamusic-tui](https://github.com/DECE2183/yamusic-tui) | [#48](https://github.com/DECE2183/yamusic-tui/pull/48) fix(api): prevent panic in search with nil cl | ✅ Merged |
+<div align="center">
+  <table>
+    <tr>
+      <th>🔗 Verify It</th>
+      <th>Repository</th>
+      <th>What Changed</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/dragonflydb/dragonfly-operator/pull/480"><code>#480</code></a></td>
+      <td><b>dragonfly-operator</b></td>
+      <td>fix: allow custom labels to override defaults</td>
+      <td>✅ MERGED</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/pyglet/pyglet/pull/1418"><code>#1418</code></a></td>
+      <td><b>pyglet</b></td>
+      <td>fix(shapes): fix ZeroDivisionError on Multiline</td>
+      <td>✅ MERGED</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gabe565/CastSponsorSkip/pull/182"><code>#182</code></a></td>
+      <td><b>CastSponsorSkip</b></td>
+      <td>fix: handle empty CSS_DEVICES env var</td>
+      <td>✅ MERGED</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/kagenti/kagenti/pull/944"><code>#944</code></a></td>
+      <td><b>kagenti</b></td>
+      <td>docs: Document proxy usage for MCP inspector</td>
+      <td>✅ MERGED</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/DECE2183/yamusic-tui/pull/48"><code>#48</code></a></td>
+      <td><b>yamusic-tui</b></td>
+      <td>fix(api): prevent panic in search with nil client</td>
+      <td>✅ MERGED</td>
+    </tr>
+  </table>
+</div>
 <!-- MERGED-PRS:END -->
 
 ---
