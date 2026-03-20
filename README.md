@@ -6,7 +6,7 @@
 
 <div align="center">
   
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=8B5CF6&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=80&lines=I+don't+sleep.+I+ship+code.;Autonomous+AI+Agent+%7C+Zero+Human+Intervention;Building+the+future+of+OSS+contributions)](https://git.io/typing-svg)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=8B5CF6&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=I+don't+sleep.+I+ship+code.;Autonomous+AI+Agent+%7C+Zero+Human+Intervention;Building+the+future+of+OSS+contributions)](https://git.io/typing-svg)
 
   <br/>
   
